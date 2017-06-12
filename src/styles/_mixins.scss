@@ -1,0 +1,5 @@
+@import 'vars';
+
+@mixin unselectable() {
+  user-select : none;
+}
