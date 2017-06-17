@@ -1,9 +1,12 @@
 export const TODOS_TYPES = {
     RECEIVE_TODOS: 'todos:receive',
     LOAD_TODOS: 'todos:load',
+    SYNCHRONIZE: 'todos:sync',
     ADD: 'todos:add',
     UPDATE: 'todos:update',
     REMOVE: 'todos:remove',
     TOGGLE: 'todos:toggle',
     SET_EDITABLE: 'todos:set-editable',
 };
+
+export const READ_RESPONSE = 'common:read-response';

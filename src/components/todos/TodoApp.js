@@ -4,7 +4,7 @@ import * as Actions from '../../actions/todos'
 import TodoList from './TodoList'
 import {ENTER_KEY} from 'src/constants/common'
 
-import styles from './style.scss'
+import './style.scss'
 
 class TodoApp extends React.Component {
     componentDidMount() {
@@ -59,7 +59,6 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps, {
     addTodo: Actions.add,
     removeTodo: Actions.remove,
-    updateTodos: Actions.setTodos,
     updateTodo: Actions.update,
-    loadTodos: Actions.loadTodos,
+    loadTodos: Actions.load,
 })(TodoApp)

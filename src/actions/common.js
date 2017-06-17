@@ -1,5 +1,9 @@
-export function dispatchServerAction(action) {
+import {READ_RESPONSE} from '../constants/action_types'
+
+export function readResponse(fromAction, response) {
     return {
-        action
+        type: READ_RESPONSE,
+        fromAction,
+        response
     };
 }

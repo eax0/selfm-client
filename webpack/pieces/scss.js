@@ -17,11 +17,14 @@ module.exports = opts => {
             use: [
                 {
                     loader: 'css-loader',
-                    query: CSS_MODULES ? {
-                        modules: true,
-                        importLoaders: 1,
-                        localIdentName: '[name]__[local]___[hash:base64:5]'
-                    } : {},
+                    options: {
+                        url: false,
+                        query: CSS_MODULES ? {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]__[local]___[hash:base64:5]'
+                        } : {},
+                    },
                 },
                 {
                     loader: "sass-loader",
