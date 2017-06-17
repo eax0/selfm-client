@@ -1,12 +1,11 @@
 import {TODOS_TYPES as Actions} from '../constants/action_types'
 import * as ajax from '../ajax'
 
-export function loadTodos() {
-    return (dispatch) => ajax.get(Actions.LOAD_TODOS).then(response => {
-        response.json().then(function (data) {
-            dispatch(receiveTodos(data || []))
-        });
-    });
+export function load() {
+    return (dispatch) => ajax.get(Actions.LOAD_TODOS)
+        .then(response => response.json())
+        .then(data => dispatch(receiveTodos(data)))
+        ;
 }
 
 export function add(fields) {
@@ -17,12 +16,12 @@ export function add(fields) {
     };
 }
 
-export function update(id, fields, remote = true) {
+export function update(id, fields) {
     return {
         type: Actions.UPDATE,
         id,
         fields,
-        meta: {remote: !!remote}
+        meta: {remote: true}
     };
 }
 
@@ -37,6 +36,6 @@ export function remove(id) {
 export function receiveTodos(todos) {
     return {
         type: Actions.RECEIVE_TODOS,
-        todos
+        todos,
     };
 }

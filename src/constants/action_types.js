@@ -1,6 +1,7 @@
 export const TODOS_TYPES = {
     RECEIVE_TODOS: 'todos:receive',
     LOAD_TODOS: 'todos:load',
+    SYNCHRONIZE: 'todos:sync',
     ADD: 'todos:add',
     UPDATE: 'todos:update',
     REMOVE: 'todos:remove',

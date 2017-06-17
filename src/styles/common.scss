@@ -4,9 +4,9 @@ body {
   margin         : 0;
   padding        : 0;
 
-  background     : #606c88; /* fallback for old browsers */
-  background     : -webkit-linear-gradient(to right, #3f4c6b, #606c88); /* Chrome 10-25, Safari 5.1-6 */
-  background     : linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  //background     : linear-gradient(to right, #3f4c6b, #606c88);
+
+  background-image : url(https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png);
 
   font-family    : $ff_base;
   font-smoothing : antialiased;
@@ -24,5 +24,5 @@ body {
   background-color : #fff;
 
   min-height       : 70vh;
-  box-shadow       : 8px 8px 15px rgba(0, 0, 0, 0.26);
+  box-shadow: 8px 8px 34px rgba(0, 0, 0, 0.13);
 }

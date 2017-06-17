@@ -26,7 +26,7 @@ export default class TodoItem extends React.Component {
                        id={id} type="checkbox" checked={completed} readOnly={true}/>
                 { editable ?
                     <input type="text" className='todo__caption todo__caption--editable' autoFocus={true} value={caption}/> :
-                    <span htmlFor={id} className='todo__caption'>{caption}</span>
+                    <span className='todo__caption'>{caption}</span>
                 }
             </div>
             <div className="todo__controls">
