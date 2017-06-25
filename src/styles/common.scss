@@ -1,4 +1,6 @@
 @import 'include';
+@import 'normalize';
+@import 'icons';
 
 body {
   margin         : 0;
@@ -6,10 +8,12 @@ body {
 
   //background     : linear-gradient(to right, #3f4c6b, #606c88);
 
-  background-image : url(https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png);
+  //background-image : url(https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png);
 
   font-family    : $ff_base;
   font-smoothing : antialiased;
+  font-weight : 300;
+  font-size : 15px;
 }
 
 *, *::before, *::after {
@@ -17,12 +21,5 @@ body {
 }
 
 #app {
-  max-width        : 500px;
   //padding          : 1em;
-  margin           : 1em auto;
-  border-radius    : 1px;
-  background-color : #fff;
-
-  min-height       : 70vh;
-  box-shadow: 8px 8px 34px rgba(0, 0, 0, 0.13);
 }

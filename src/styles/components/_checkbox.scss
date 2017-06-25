@@ -1,11 +1,11 @@
 @import 'include';
 
-@mixin checkbox($clr: $clr_accent, $size: 1em, $border_clr: #f2f2f2, $border_width: 2px) {
-  outline: none;
+@mixin checkbox($clr: $clr_accent, $size: 1em, $border_clr: #f2f2f2, $bg_clr: #fff, $border_width: 2px, $round: false) {
+  outline  : none;
   position : relative;
   //top: rem(-6);
-  top      : -.2em;
   margin   : 0 1em 0 0;
+  height   : .9em;
   cursor   : pointer;
 
   &:before {
@@ -21,11 +21,16 @@
     height     : $size;
 
     border     : $border_width solid $border_clr;
+
+    @if ($round) {
+      border-radius : 50%;
+    }
   }
 
   &:checked {
     &:before {
       transform          : rotate(-45deg);
+      border-radius      : 0;
 
       height             : .5em;
 
@@ -42,10 +47,10 @@
     //top        : rem(-2);
     left       : 0;
 
-    width      : .1em + $size;
-    height     : .1em + $size;
+    width      : $size;
+    height     : $size;
 
-    background : #fff;
+    background : $bg_clr;
 
     cursor     : pointer;
   }
