@@ -2,7 +2,6 @@
 @import 'components/checkbox';
 
 .project {
-
 }
 
 .project__row {
@@ -16,6 +15,10 @@
   .project__name {
     flex: 1;
   }
+}
+
+.project__row--actions {
+
 }
 
 .project__checkbox {
@@ -174,11 +177,11 @@ $completed_task_opacity : .5;
   }
 }
 
-.task--selected:not(.task--open) {
-  background-color : #f3f3f3;
+.task:hover:not(.task--open) {
+  background-color : #f5f5f5;
 
   .task__checkbox {
-    @include checkbox($checkbox_clr, 1em, $bg_clr : #f3f3f3, $border_clr : #bbb);
+    @include checkbox($checkbox_clr, 1em, $bg_clr : #f5f5f5, $border_clr : #ddd);
   }
 }
 

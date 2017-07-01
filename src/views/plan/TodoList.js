@@ -19,7 +19,7 @@ class TodoItem extends React.Component {
             <TextField
                 autoFocus={!id}
                 className="todo__caption"
-                onValueChange={saveTodo.bind(null)}
+                onValueChange={saveTodo}
                 onEnter={createTodo}
                 onKeyDown={this.onKeyDown.bind(this, id)}
                 text={caption} />

@@ -1,6 +1,7 @@
 import React from 'react'
 import cs from 'classnames'
 import {NavLink} from 'react-router-dom'
+import Icon from 'src/components/Icon'
 
 class ProjectLink extends React.Component {
     render() {
@@ -30,7 +31,7 @@ export default class extends React.Component {
 
             <div className="sidebar__actions">
                 <div onClick={createProject} className="sidebar__action sidebar__action--add">
-                    <i className="icon icon--plus"></i>
+                    <Icon name="plus"/>
                     <span>Новый проект</span>
                 </div>
             </div>

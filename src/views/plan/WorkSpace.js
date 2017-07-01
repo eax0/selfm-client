@@ -23,8 +23,8 @@ class WorkSpace extends React.Component {
     }
 
     render() {
-        const project = this.props.project ? <Project {...this.props} {...this.props.project} update={this.props.updateProject} /> : ''
-
+        const project = this.props.project ?
+            <Project {...this.props} {...this.props.project} update={this.props.updateProject} /> : ''
 
         return <div className="workspace">
                 {/*<input
@@ -36,10 +36,6 @@ class WorkSpace extends React.Component {
                     onKeyDown={this.onKeyDown.bind(this)}/>*/}
 
             {project}
-
-            <Route exact={true} path="/" render={() => {
-                return <TaskList {...this.props} />;
-            }} />
         </div>
     }
 }

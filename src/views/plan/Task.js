@@ -83,7 +83,6 @@ export default class extends React.Component {
                     text={notes}
                     className="task__notes"
                     placeholder="Заметки"
-                    className="task__caption"
                     onValueChange={this.onInputChange.bind(this, 'notes')}
                 />
             </div>
